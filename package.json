@@ -23,6 +23,9 @@
     "url": "https://github.com/yourusername/qloo-typescript-sdk/issues"
   },
   "homepage": "https://github.com/yourusername/qloo-typescript-sdk#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "tshy": {
     "sourceDialects": [
