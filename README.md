@@ -28,15 +28,18 @@ This SDK provides a comprehensive TypeScript interface for the Qloo Insights API
 - ✅ **Validation** - Built-in request/response validation using Zod
 - 🚀 **Modern** - Supports Node.js 18+ and modern JavaScript runtimes
 - 📚 **Well-documented** - Comprehensive documentation and examples
+- 🤖 **AI-ready** - Includes LLM.txt for AI model integration and automation
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Authentication](#authentication)
+- [Server Configuration](#server-configuration)
 - [Available Operations](#available-operations)
 - [Examples](#examples)
 - [Error Handling](#error-handling)
+- [AI Integration](#ai-integration)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -86,6 +89,53 @@ const qloo = new Qloo({
   apiKey: process.env.QLOO_API_KEY // Store your API key in environment variables
 });
 ```
+
+## Server Configuration
+
+The SDK supports different server environments for development, testing, and production use:
+
+### Available Environments
+
+- **Staging**: `https://staging.api.qloo.com` - Development and testing
+- **Hackathon**: `https://hackathon.api.qloo.com` - Special hackathon environment (default)
+
+### Configuration Examples
+
+```typescript
+import { Qloo } from '@devma/qloo';
+
+// Production (default)
+const qloo = new Qloo({
+  apiKey: 'your-api-key'
+});
+
+// Staging environment
+const qlooStaging = new Qloo({
+  serverURL: 'https://staging.api.qloo.com',
+  apiKey: 'your-staging-api-key'
+});
+
+// Hackathon environment
+const qlooHackathon = new Qloo({
+  serverURL: 'https://hackathon.api.qloo.com',
+  apiKey: 'your-hackathon-api-key'
+});
+
+// Using configuration object
+const config = {
+  Qloo: {
+    url: 'https://hackathon.api.qloo.com',
+    apikey: 'your-hackathon-api-key'
+  }
+};
+
+const qloo = new Qloo({
+  serverURL: config.Qloo.url,
+  apiKey: config.Qloo.apikey,
+});
+```
+
+> **Note**: This SDK was originally created for the Qloo hackathon to provide a more developer-friendly interface to the Qloo API. The hackathon environment provides special features and endpoints for hackathon participants.
 
 ## Available Operations
 
@@ -163,6 +213,18 @@ try {
   }
 }
 ```
+
+## AI Integration
+
+This package includes `LLM.txt` - a comprehensive guide designed specifically for AI models and LLM agents. This file contains:
+
+- **Core Concepts**: Understanding Qloo's signal+filter model
+- **Entity Types**: Places, movies, artists, podcasts, books, brands, people
+- **API Usage**: Complete examples for all endpoints
+- **Best Practices**: Optimized patterns for AI integration
+- **Quick Reference**: Tables and structured data for rapid lookup
+
+AI developers and LLM agents can use this file to quickly understand and integrate with the Qloo API without additional context.
 
 ## Development
 
