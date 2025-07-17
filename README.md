@@ -3,14 +3,14 @@
 Developer-friendly & type-safe TypeScript SDK for the Qloo Insights API - Generate taste-based insights and recommendations.
 
 <div align="left">
-    <a href="https://www.npmjs.com/package/qloo-typescript-sdk">
-        <img src="https://img.shields.io/npm/v/qloo-typescript-sdk.svg" alt="npm version" />
+    <a href="https://www.npmjs.com/package/@devma/qloo">
+        <img src="https://img.shields.io/npm/v/@devma/qloo.svg" alt="npm version" />
     </a>
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" />
     </a>
-    <a href="https://github.com/yourusername/qloo-typescript-sdk/actions">
-        <img src="https://github.com/yourusername/qloo-typescript-sdk/workflows/CI/badge.svg" alt="CI Status" />
+    <a href="https://github.com/manasseh-zw/qloo-ts-sdk">
+        <img src="https://img.shields.io/github/stars/manasseh-zw/qloo-ts-sdk.svg" alt="GitHub stars" />
     </a>
 </div>
 
@@ -46,19 +46,19 @@ Install the SDK using your preferred package manager:
 
 ```bash
 # npm
-npm install qloo-typescript-sdk
+npm install @devma/qloo
 
 # yarn
-yarn add qloo-typescript-sdk
+yarn add @devma/qloo
 
 # pnpm
-pnpm add qloo-typescript-sdk
+pnpm add @devma/qloo
 ```
 
 ## Quick Start
 
 ```typescript
-import { Qloo } from 'qloo-typescript-sdk';
+import { Qloo } from '@devma/qloo';
 
 // Initialize the SDK
 const qloo = new Qloo({
@@ -80,7 +80,7 @@ console.log(insights.results?.entities);
 The Qloo SDK uses API key authentication. You can obtain your API key from the [Qloo Dashboard](https://dashboard.qloo.com).
 
 ```typescript
-import { Qloo } from 'qloo-typescript-sdk';
+import { Qloo } from '@devma/qloo';
 
 const qloo = new Qloo({
   apiKey: process.env.QLOO_API_KEY // Store your API key in environment variables
@@ -105,7 +105,7 @@ const qloo = new Qloo({
 ### Restaurant Recommendations
 
 ```typescript
-import { Qloo } from 'qloo-typescript-sdk';
+import { Qloo } from '@devma/qloo';
 
 const qloo = new Qloo({ apiKey: 'your-api-key' });
 
@@ -147,7 +147,7 @@ const audienceInsights = await qloo.insights.getInsights({
 The SDK provides comprehensive error handling:
 
 ```typescript
-import { QlooError } from 'qloo-typescript-sdk';
+import { QlooError } from '@devma/qloo';
 
 try {
   const insights = await qloo.insights.getInsights({
@@ -217,7 +217,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 - 📧 For questions and support, please contact: [support@qloo.com](mailto:support@qloo.com)
-- 🐛 For bug reports and feature requests, please [open an issue](https://github.com/yourusername/qloo-typescript-sdk/issues)
+- 🐛 For bug reports and feature requests, please [open an issue](https://github.com/manasseh-zw/qloo-ts-sdk/issues)
 - 📖 For more information about the Qloo API, visit the [official documentation](https://docs.qloo.com)
 
 ---

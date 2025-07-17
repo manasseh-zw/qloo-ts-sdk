@@ -1,8 +1,8 @@
 {
-  "name": "qloo-typescript-sdk",
+  "name": "@devma/qloo",
   "version": "1.0.0",
   "description": "TypeScript SDK for the Qloo Insights API - Generate taste-based insights and recommendations",
-  "author": "Your Name <your.email@example.com>",
+  "author": "devma <dev.manasseh@gmail.com>",
   "license": "MIT",
   "keywords": [
     "qloo",
@@ -17,19 +17,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/qloo-typescript-sdk.git"
+    "url": "https://github.com/manasseh-zw/qloo-ts-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/qloo-typescript-sdk/issues"
+    "url": "https://github.com/manasseh-zw/qloo-ts-sdk/issues"
   },
-  "homepage": "https://github.com/yourusername/qloo-typescript-sdk#readme",
+  "homepage": "https://github.com/manasseh-zw/qloo-ts-sdk#readme",
   "publishConfig": {
     "access": "public"
   },
   "type": "module",
   "tshy": {
     "sourceDialects": [
-      "qloo-typescript-sdk/source"
+      "@devma/qloo/source"
     ],
     "exports": {
       ".": "./src/index.ts",
@@ -72,7 +72,7 @@
   "exports": {
     ".": {
       "import": {
-        "qloo-typescript-sdk/source": "./src/index.ts",
+        "@devma/qloo/source": "./src/index.ts",
         "types": "./dist/esm/index.d.ts",
         "default": "./dist/esm/index.js"
       },
@@ -84,7 +84,7 @@
     "./package.json": "./package.json",
     "./types": {
       "import": {
-        "qloo-typescript-sdk/source": "./src/types/index.ts",
+        "@devma/qloo/source": "./src/types/index.ts",
         "types": "./dist/esm/types/index.d.ts",
         "default": "./dist/esm/types/index.js"
       },
@@ -95,7 +95,7 @@
     },
     "./models/errors": {
       "import": {
-        "qloo-typescript-sdk/source": "./src/models/errors/index.ts",
+        "@devma/qloo/source": "./src/models/errors/index.ts",
         "types": "./dist/esm/models/errors/index.d.ts",
         "default": "./dist/esm/models/errors/index.js"
       },
@@ -106,7 +106,7 @@
     },
     "./models": {
       "import": {
-        "qloo-typescript-sdk/source": "./src/models/index.ts",
+        "@devma/qloo/source": "./src/models/index.ts",
         "types": "./dist/esm/models/index.d.ts",
         "default": "./dist/esm/models/index.js"
       },
@@ -117,7 +117,7 @@
     },
     "./models/operations": {
       "import": {
-        "qloo-typescript-sdk/source": "./src/models/operations/index.ts",
+        "@devma/qloo/source": "./src/models/operations/index.ts",
         "types": "./dist/esm/models/operations/index.d.ts",
         "default": "./dist/esm/models/operations/index.js"
       },
@@ -128,7 +128,7 @@
     },
     "./*.js": {
       "import": {
-        "qloo-typescript-sdk/source": "./src/*.ts",
+        "@devma/qloo/source": "./src/*.ts",
         "types": "./dist/esm/*.d.ts",
         "default": "./dist/esm/*.js"
       },
@@ -139,7 +139,7 @@
     },
     "./*": {
       "import": {
-        "qloo-typescript-sdk/source": "./src/*.ts",
+        "@devma/qloo/source": "./src/*.ts",
         "types": "./dist/esm/*.d.ts",
         "default": "./dist/esm/*.js"
       },
