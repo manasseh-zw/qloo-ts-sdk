@@ -45,7 +45,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "tshy",
-    "clean": "rm -rf dist .tshy .tsbuildinfo .eslintcache",
+    "clean": "if exist dist rmdir /s /q dist && if exist .tshy rmdir /s /q .tshy && if exist .tsbuildinfo del .tsbuildinfo && if exist .eslintcache del .eslintcache",
     "lint": "eslint --cache --max-warnings=0 src",
     "lint:fix": "eslint --cache --fix src",
     "test": "echo \"No tests specified\" && exit 0",
