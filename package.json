@@ -1,6 +1,6 @@
 {
   "name": "@devma/qloo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript SDK for the Qloo Insights API - Generate taste-based insights and recommendations",
   "author": "devma <dev.manasseh@gmail.com>",
   "license": "MIT",

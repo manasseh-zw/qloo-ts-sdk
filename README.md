@@ -92,39 +92,45 @@ const qloo = new Qloo({
 
 ## Server Configuration
 
-The SDK supports different server environments for development, testing, and production use:
+The SDK supports different server environments for development, testing, and production use.
 
 ### Available Environments
 
-- **Staging**: `https://staging.api.qloo.com` - Development and testing
-- **Hackathon**: `https://hackathon.api.qloo.com` - Special hackathon environment (default)
+- **Hackathon (default):** `https://hackathon.api.qloo.com/v2`
+- **Staging:** `https://staging.api.qloo.com/v2`
+- **Production:** (e.g., `https://api.qloo.com/v2`)
+
+> **Important:**
+> - By default, the SDK points to the hackathon API URL (`https://hackathon.api.qloo.com/v2`).
+> - If you provide a custom `serverURL`, you **must** include the full path including the API version (e.g., `/v2`).
+>   For example, `serverURL: "https://staging.api.qloo.com/v2"` is correct, but `serverURL: "https://staging.api.qloo.com"` will **not** work.
 
 ### Configuration Examples
 
 ```typescript
 import { Qloo } from '@devma/qloo';
 
-// Production (default)
+// Hackathon (default, no need to specify serverURL)
 const qloo = new Qloo({
-  apiKey: 'your-api-key'
+  apiKey: 'your-hackathon-api-key'
 });
 
 // Staging environment
 const qlooStaging = new Qloo({
-  serverURL: 'https://staging.api.qloo.com',
+  serverURL: 'https://staging.api.qloo.com/v2', // Note the /v2
   apiKey: 'your-staging-api-key'
 });
 
-// Hackathon environment
-const qlooHackathon = new Qloo({
-  serverURL: 'https://hackathon.api.qloo.com',
-  apiKey: 'your-hackathon-api-key'
+// Production environment
+const qlooProd = new Qloo({
+  serverURL: 'https://api.qloo.com/v2', // Note the /v2
+  apiKey: 'your-production-api-key'
 });
 
 // Using configuration object
 const config = {
   Qloo: {
-    url: 'https://hackathon.api.qloo.com',
+    url: 'https://hackathon.api.qloo.com/v2', // Must include /v2
     apikey: 'your-hackathon-api-key'
   }
 };
@@ -135,7 +141,7 @@ const qloo = new Qloo({
 });
 ```
 
-> **Note**: This SDK was originally created for the Qloo hackathon to provide a more developer-friendly interface to the Qloo API. The hackathon environment provides special features and endpoints for hackathon participants.
+> **Note**: This SDK was originally created for the Qloo hackathon to provide a more developer-friendly interface to the Qloo API. 
 
 ## Available Operations
 
